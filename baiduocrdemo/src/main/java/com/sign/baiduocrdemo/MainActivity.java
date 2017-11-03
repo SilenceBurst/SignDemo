@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onError(OCRError error) {
                     }
-                }, getApplicationContext(), "Your API Key", "Your Secret Key");
+                }, getApplicationContext(), "zEUGztoGrxVtPYRmvXphv28T", "9cNy4iOjL1VjHyVreKWihiH4OiBEEwXB");
     }
 
     private void getData() {

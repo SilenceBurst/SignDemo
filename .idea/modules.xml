@@ -3,14 +3,23 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SignDemo.iml" filepath="$PROJECT_DIR$/SignDemo.iml" />
+      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\SignDemo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\SignDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\app\app.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/baiduocrdemo/baiduocrdemo.iml" filepath="$PROJECT_DIR$/baiduocrdemo/baiduocrdemo.iml" />
+      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\baiduocrdemo\baiduocrdemo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\baiduocrdemo\baiduocrdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/camerademo/camerademo.iml" filepath="$PROJECT_DIR$/camerademo/camerademo.iml" />
+      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\camerademo\camerademo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\camerademo\camerademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/constraintlayoutdemo/constraintlayoutdemo.iml" filepath="$PROJECT_DIR$/constraintlayoutdemo/constraintlayoutdemo.iml" />
+      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\constraintlayoutdemo\constraintlayoutdemo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\constraintlayoutdemo\constraintlayoutdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/customviewdemo/customviewdemo.iml" filepath="$PROJECT_DIR$/customviewdemo/customviewdemo.iml" />
+      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\customviewdemo\customviewdemo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\customviewdemo\customviewdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/gradienttoolbardemo/gradienttoolbardemo.iml" filepath="$PROJECT_DIR$/gradienttoolbardemo/gradienttoolbardemo.iml" />
+      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\gradienttoolbardemo\gradienttoolbardemo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\gradienttoolbardemo\gradienttoolbardemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvpdemo/mvpdemo.iml" filepath="$PROJECT_DIR$/mvpdemo/mvpdemo.iml" />
+      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\mvpdemo\mvpdemo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\mvpdemo\mvpdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ocr_ui/ocr_ui.iml" filepath="$PROJECT_DIR$/ocr_ui/ocr_ui.iml" />
+      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\ocr_ui\ocr_ui.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\ocr_ui\ocr_ui.iml" />
     </modules>
   </component>
 </project>
