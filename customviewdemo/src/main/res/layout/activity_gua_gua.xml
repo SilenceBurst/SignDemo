@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sign="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sign.signview.activity.GuaGuaActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <com.sign.signview.view.GuaGuaView
+        android:id="@+id/guagua"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        sign:text="我中奖了"
+        sign:textColor="#ff0000"
+        sign:textSize="22sp" />
+</RelativeLayout>

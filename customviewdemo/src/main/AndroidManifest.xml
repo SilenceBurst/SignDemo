@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sign.signview">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.HeartActivity"
+            android:label="丘比特  咻~" />
+        <activity
+            android:name=".activity.BezierActivity"
+            android:label="贝塞尔" />
+        <activity
+            android:name=".activity.WaveActivity"
+            android:label="水波纹" />
+        <activity
+            android:name=".activity.FaceActivity"
+            android:label="百变心情" />
+        <activity
+            android:name=".activity.MyCardActivity"
+            android:label="边缘凹凸卡片" />
+        <activity
+            android:name=".activity.GuaGuaActivity"
+            android:label="刮刮卡" />
+    </application>
+
+</manifest>

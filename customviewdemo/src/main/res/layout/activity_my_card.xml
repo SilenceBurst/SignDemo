@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sign.signview.activity.MyCardActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <com.sign.signview.view.MyCardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#1a93ef"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:text="1000000元"
+            android:textColor="#fff" />
+    </com.sign.signview.view.MyCardView>
+</LinearLayout>

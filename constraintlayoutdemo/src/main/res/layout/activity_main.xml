@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sign.constaintlayoutdemo.MainActivity">
+
+    <Button
+        android:id="@+id/gone_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="gone_margin margin补充" />
+
+    <Button
+        android:id="@+id/bias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="bias 倾向"
+        app:layout_constraintTop_toBottomOf="@id/gone_margin" />
+
+    <Button
+        android:id="@+id/match_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="match_constraint"
+        app:layout_constraintTop_toBottomOf="@id/bias" />
+
+    <Button
+        android:id="@+id/ratio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ratio 比例"
+        app:layout_constraintTop_toBottomOf="@id/match_constraint" />
+
+    <Button
+        android:id="@+id/chain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="chain 链条"
+        app:layout_constraintTop_toBottomOf="@id/ratio" />
+
+    <Button
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="guideline"
+        app:layout_constraintTop_toBottomOf="@id/chain" />
+</android.support.constraint.ConstraintLayout>
