@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/gradienttoolbardemo" />
             <option value="$PROJECT_DIR$/mvpdemo" />
             <option value="$PROJECT_DIR$/ocr_ui" />
+            <option value="$PROJECT_DIR$/verticalviewpagerdemo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

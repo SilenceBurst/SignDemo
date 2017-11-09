@@ -1,1 +1,1 @@
-include ':app', 'constraintlayoutdemo', 'camerademo', 'customviewdemo', 'gradienttoolbardemo', 'mvpdemo', 'baiduocrdemo', ':ocr_ui', 'diffutildemo'
+include ':app', 'constraintlayoutdemo', 'camerademo', 'customviewdemo', 'gradienttoolbardemo', 'mvpdemo', 'baiduocrdemo', ':ocr_ui', 'diffutildemo', 'verticalviewpagerdemo'
