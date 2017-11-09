@@ -4,3 +4,4 @@
 # [自定义view练习](https://github.com/SilenceBurst/SignDemo/tree/master/customviewdemo/src)
 # [仿京东搜索栏随滑动切换图标及透明度渐变](https://github.com/SilenceBurst/SignDemo/tree/master/gradienttoolbardemo/src)
 # [Mvp框架demo](https://github.com/SilenceBurst/SignDemo/tree/master/mvpdemo)
+# [纵向viewpager 轮播](https://github.com/SilenceBurst/SignDemo/tree/master/verticalviewpagerdemo/src)
