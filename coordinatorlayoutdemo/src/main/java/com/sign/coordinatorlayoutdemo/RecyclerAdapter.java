@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/*
+/**
  * 项目名:    CoordinatorLayoutDemo
  * 包名       com.sign.coordinatorlayoutdemo
  * 文件名:    RecyclerAdapter
