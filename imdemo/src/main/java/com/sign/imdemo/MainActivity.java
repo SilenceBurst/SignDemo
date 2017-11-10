@@ -16,7 +16,6 @@ import com.qiyukf.unicorn.api.YSFUserInfo;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView tvNumber;
     private TextView tvCustomerService;
 
     @Override
