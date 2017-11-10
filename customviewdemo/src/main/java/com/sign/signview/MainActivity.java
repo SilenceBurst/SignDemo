@@ -12,6 +12,7 @@ import com.sign.signview.activity.FaceActivity;
 import com.sign.signview.activity.GuaGuaActivity;
 import com.sign.signview.activity.MyCardActivity;
 import com.sign.signview.activity.HeartActivity;
+import com.sign.signview.activity.RoundProgressbarActivity;
 import com.sign.signview.activity.WaveActivity;
 import com.sign.signview.adapter.MainAdapter;
 import com.sign.signview.utils.ToolbarUtil;
@@ -68,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
                     case 5:
                         startActivity(new Intent(context, GuaGuaActivity.class));
                         break;
+                    case 6:
+                        startActivity(new Intent(context, RoundProgressbarActivity.class));
+                        break;
                     default:
                         break;
                 }
@@ -89,5 +93,6 @@ public class MainActivity extends AppCompatActivity {
         mainList.add("百变心情");
         mainList.add("边缘凹凸卡片");
         mainList.add("刮刮卡");
+        mainList.add("圆形进度条");
     }
 }

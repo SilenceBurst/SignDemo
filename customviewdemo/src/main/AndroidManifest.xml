@@ -33,6 +33,7 @@
         <activity
             android:name=".activity.GuaGuaActivity"
             android:label="刮刮卡" />
+        <activity android:name=".activity.RoundProgressbarActivity"></activity>
     </application>
 
 </manifest>
