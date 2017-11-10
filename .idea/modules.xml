@@ -26,6 +26,7 @@
       <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\ocr_ui\ocr_ui.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\ocr_ui\ocr_ui.iml" />
       <module fileurl="file://$PROJECT_DIR$/proxydemo/proxydemo.iml" filepath="$PROJECT_DIR$/proxydemo/proxydemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/recordbutton/recordbutton.iml" filepath="$PROJECT_DIR$/recordbutton/recordbutton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recyclerviewitemdecoration/recyclerviewitemdecoration.iml" filepath="$PROJECT_DIR$/recyclerviewitemdecoration/recyclerviewitemdecoration.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjava2demo/rxjava2demo.iml" filepath="$PROJECT_DIR$/rxjava2demo/rxjava2demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/verticalviewpagerdemo/verticalviewpagerdemo.iml" filepath="$PROJECT_DIR$/verticalviewpagerdemo/verticalviewpagerdemo.iml" />
     </modules>
