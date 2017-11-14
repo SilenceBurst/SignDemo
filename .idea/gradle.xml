@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/RecycleAdapterlibrary" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/baiduocrdemo" />
+            <option value="$PROJECT_DIR$/bluetoothdemo" />
             <option value="$PROJECT_DIR$/camerademo" />
             <option value="$PROJECT_DIR$/constraintlayoutdemo" />
             <option value="$PROJECT_DIR$/coordinatorlayoutdemo" />
@@ -19,6 +20,7 @@
             <option value="$PROJECT_DIR$/gradienttoolbardemo" />
             <option value="$PROJECT_DIR$/imdemo" />
             <option value="$PROJECT_DIR$/mvpdemo" />
+            <option value="$PROJECT_DIR$/networksniffdemo" />
             <option value="$PROJECT_DIR$/ocr_ui" />
             <option value="$PROJECT_DIR$/proxydemo" />
             <option value="$PROJECT_DIR$/recordbutton" />
