@@ -4,29 +4,20 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RecycleAdapterlibrary/RecycleAdapterlibrary.iml" filepath="$PROJECT_DIR$/RecycleAdapterlibrary/RecycleAdapterlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/SignDemo.iml" filepath="$PROJECT_DIR$/SignDemo.iml" />
-      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\SignDemo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\SignDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\app\app.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/baiduocrdemo/baiduocrdemo.iml" filepath="$PROJECT_DIR$/baiduocrdemo/baiduocrdemo.iml" />
-      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\baiduocrdemo\baiduocrdemo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\baiduocrdemo\baiduocrdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/bluetoothdemo/bluetoothdemo.iml" filepath="$PROJECT_DIR$/bluetoothdemo/bluetoothdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/bluetoothlowenergy/bluetoothlowenergy.iml" filepath="$PROJECT_DIR$/bluetoothlowenergy/bluetoothlowenergy.iml" />
       <module fileurl="file://$PROJECT_DIR$/camerademo/camerademo.iml" filepath="$PROJECT_DIR$/camerademo/camerademo.iml" />
-      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\camerademo\camerademo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\camerademo\camerademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/constraintlayoutdemo/constraintlayoutdemo.iml" filepath="$PROJECT_DIR$/constraintlayoutdemo/constraintlayoutdemo.iml" />
-      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\constraintlayoutdemo\constraintlayoutdemo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\constraintlayoutdemo\constraintlayoutdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/coordinatorlayoutdemo/coordinatorlayoutdemo.iml" filepath="$PROJECT_DIR$/coordinatorlayoutdemo/coordinatorlayoutdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/customviewdemo/customviewdemo.iml" filepath="$PROJECT_DIR$/customviewdemo/customviewdemo.iml" />
-      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\customviewdemo\customviewdemo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\customviewdemo\customviewdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/diffutildemo/diffutildemo.iml" filepath="$PROJECT_DIR$/diffutildemo/diffutildemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/gradienttoolbardemo/gradienttoolbardemo.iml" filepath="$PROJECT_DIR$/gradienttoolbardemo/gradienttoolbardemo.iml" />
-      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\gradienttoolbardemo\gradienttoolbardemo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\gradienttoolbardemo\gradienttoolbardemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/imdemo/imdemo.iml" filepath="$PROJECT_DIR$/imdemo/imdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvpdemo/mvpdemo.iml" filepath="$PROJECT_DIR$/mvpdemo/mvpdemo.iml" />
-      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\mvpdemo\mvpdemo.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\mvpdemo\mvpdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/networksniffdemo/networksniffdemo.iml" filepath="$PROJECT_DIR$/networksniffdemo/networksniffdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ocr_ui/ocr_ui.iml" filepath="$PROJECT_DIR$/ocr_ui/ocr_ui.iml" />
-      <module fileurl="file://C:\Users\Administrator\Desktop\SignDemo\ocr_ui\ocr_ui.iml" filepath="C:\Users\Administrator\Desktop\SignDemo\ocr_ui\ocr_ui.iml" />
       <module fileurl="file://$PROJECT_DIR$/proxydemo/proxydemo.iml" filepath="$PROJECT_DIR$/proxydemo/proxydemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/recordbutton/recordbutton.iml" filepath="$PROJECT_DIR$/recordbutton/recordbutton.iml" />
       <module fileurl="file://$PROJECT_DIR$/recyclerviewitemdecoration/recyclerviewitemdecoration.iml" filepath="$PROJECT_DIR$/recyclerviewitemdecoration/recyclerviewitemdecoration.iml" />
