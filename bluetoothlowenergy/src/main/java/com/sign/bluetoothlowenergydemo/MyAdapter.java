@@ -28,8 +28,16 @@ public class MyAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         ((TextView) holder.itemView).setText("name:" + list.get(position).getName() + "  address:" + list.get(position).getAddress());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (myAdapterListener != null) {
+                    myAdapterListener.onItemClick(position);
+                }
+            }
+        });
     }
 
     @Override
@@ -52,7 +60,7 @@ public class MyAdapter extends RecyclerView.Adapter {
         notifyDataSetChanged();
     }
 
-    public void clear(){
+    public void clear() {
         this.list.clear();
         notifyDataSetChanged();
     }
@@ -66,5 +74,15 @@ public class MyAdapter extends RecyclerView.Adapter {
         public MyViewHolder(View itemView) {
             super(itemView);
         }
+    }
+
+    MyAdapterListener myAdapterListener;
+
+    public void setMyAdapterListener(MyAdapterListener myAdapterListener) {
+        this.myAdapterListener = myAdapterListener;
+    }
+
+    public interface MyAdapterListener {
+        void onItemClick(int position);
     }
 }

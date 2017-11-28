@@ -54,6 +54,24 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
         mMyAdapter = new MyAdapter();
+        //点击连接
+        mMyAdapter.setMyAdapterListener(new MyAdapter.MyAdapterListener() {
+            @Override
+            public void onItemClick(int position) {
+                BluetoothDevice device = mMyAdapter.getList().get(position);
+                if (device == null) {
+                    return;
+                }
+                Intent intent = new Intent(mContext, DeviceControlActivity.class);
+                intent.putExtra(DeviceControlActivity.DEVICE_NAME, device.getName());
+                intent.putExtra(DeviceControlActivity.DEVICE_ADDRESS, device.getAddress());
+                if (mScanning) {
+                    mBluetoothAdapter.stopLeScan(mLeScanCallback);
+                    mScanning = false;
+                }
+                startActivity(intent);
+            }
+        });
         mRecyclerView.setAdapter(mMyAdapter);
 
         mHandler = new Handler();
