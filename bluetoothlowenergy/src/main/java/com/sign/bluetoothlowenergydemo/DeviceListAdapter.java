@@ -13,11 +13,11 @@ import java.util.List;
 /**
  * 适配器
  */
-public class MyAdapter extends RecyclerView.Adapter {
+public class DeviceListAdapter extends RecyclerView.Adapter {
 
     private List<BluetoothDevice> list;
 
-    public MyAdapter() {
+    public DeviceListAdapter() {
         list = new ArrayList<>();
     }
 

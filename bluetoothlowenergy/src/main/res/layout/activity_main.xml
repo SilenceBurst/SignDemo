@@ -6,10 +6,31 @@
     android:orientation="vertical"
     tools:context="com.sign.bluetoothlowenergydemo.MainActivity">
 
-    <TextView
-        android:id="@+id/text_view"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="扫描状态："
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ddd" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
