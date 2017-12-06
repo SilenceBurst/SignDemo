@@ -15,4 +15,5 @@
 [RecyclerView分割线](https://github.com/SilenceBurst/SignDemo/tree/master/recyclerviewitemdecoration/src)</br></br>
 [获得同一局域网下的所有连接设备](https://github.com/SilenceBurst/SignDemo/tree/master/networksniffdemo/src)</br></br>
 [蓝牙demo](https://github.com/SilenceBurst/SignDemo/tree/master/bluetoothdemo/src)</br></br>
+[低功耗蓝牙demo](https://github.com/SilenceBurst/SignDemo/tree/master/bluetoothlowenergy/src)</br></br>
 [MPAndroidChartdemo （标签换行）](https://github.com/SilenceBurst/SignDemo/tree/master/chartdemo/src)</br></br>
