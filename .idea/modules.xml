@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/bluetoothdemo/bluetoothdemo.iml" filepath="$PROJECT_DIR$/bluetoothdemo/bluetoothdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/bluetoothlowenergy/bluetoothlowenergy.iml" filepath="$PROJECT_DIR$/bluetoothlowenergy/bluetoothlowenergy.iml" />
       <module fileurl="file://$PROJECT_DIR$/camerademo/camerademo.iml" filepath="$PROJECT_DIR$/camerademo/camerademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chartdemo/chartdemo.iml" filepath="$PROJECT_DIR$/chartdemo/chartdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/constraintlayoutdemo/constraintlayoutdemo.iml" filepath="$PROJECT_DIR$/constraintlayoutdemo/constraintlayoutdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/coordinatorlayoutdemo/coordinatorlayoutdemo.iml" filepath="$PROJECT_DIR$/coordinatorlayoutdemo/coordinatorlayoutdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/customviewdemo/customviewdemo.iml" filepath="$PROJECT_DIR$/customviewdemo/customviewdemo.iml" />
