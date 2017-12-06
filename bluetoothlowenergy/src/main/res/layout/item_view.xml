@@ -2,4 +2,6 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp" />
+    android:background="@drawable/bg_item_view"
+    android:padding="16dp"
+    android:textSize="14sp" />

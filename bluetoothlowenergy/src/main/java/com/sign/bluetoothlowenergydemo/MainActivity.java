@@ -45,18 +45,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mContext = this;
-        initData();
+        initView();
+
+        initListener();
 
         checkWhetherSupportBLE();
 
         checkPermission();
     }
 
-    private void initData() {
-        mTextView = findViewById(R.id.text_view);
-        mRecyclerView = findViewById(R.id.recycler_view);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
-        mDeviceListAdapter = new DeviceListAdapter();
+    private void initListener() {
         //点击跳转连接设备
         mDeviceListAdapter.setMyAdapterListener(new DeviceListAdapter.MyAdapterListener() {
             @Override
@@ -75,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mRecyclerView.setAdapter(mDeviceListAdapter);
 
         //已存在的设备集合
         devices = mDeviceListAdapter.getList();
@@ -97,6 +94,14 @@ public class MainActivity extends AppCompatActivity {
                         });
                     }
                 };
+    }
+
+    private void initView() {
+        mTextView = findViewById(R.id.text_view);
+        mRecyclerView = findViewById(R.id.recycler_view);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
+        mDeviceListAdapter = new DeviceListAdapter();
+        mRecyclerView.setAdapter(mDeviceListAdapter);
     }
 
     /**
