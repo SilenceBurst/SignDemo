@@ -29,7 +29,7 @@ public class DeviceListAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
-        ((TextView) holder.itemView).setText("name:" + list.get(position).getName() + "  address:" + list.get(position).getAddress());
+        ((TextView) holder.itemView).setText("name：" + list.get(position).getName() + "\naddress：" + list.get(position).getAddress());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
