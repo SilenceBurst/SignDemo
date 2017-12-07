@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private static final long SCAN_PERIOD = 10000;
     //扫描结果回调
     private BluetoothAdapter.LeScanCallback mLeScanCallback;
-    private List<BluetoothDevice> devices;
+    private List<BluetoothDevice> mDevices;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //已存在的设备集合
-        devices = mDeviceListAdapter.getList();
+        mDevices = mDeviceListAdapter.getList();
         mHandler = new Handler();
         mLeScanCallback =
                 new BluetoothAdapter.LeScanCallback() {
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                             public void run() {
                                 if (device != null) {
                                     //过滤同一设备
-                                    if (!devices.contains(device)) {
+                                    if (!mDevices.contains(device)) {
                                         mDeviceListAdapter.addData(device);
                                     }
                                 }
