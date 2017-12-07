@@ -126,6 +126,21 @@ public class DeviceControlActivity extends AppCompatActivity {
                         final BluetoothGattCharacteristic characteristic =
                                 mGattCharacteristics.get(groupPosition).get(childPosition);
                         final int charaProp = characteristic.getProperties();
+                        /**
+                         * 正常流程
+                         * 打开  指定接收特征  （指定UUID）通知
+                         * 在  指定写入特征  写入数据
+                         */
+                        //打开接收
+//                        if (characteristic.getUuid().toString().equals("0000ff02-0000-1000-8000-00805f9b34fb")) {
+//                            mBluetoothLeService.setCharacteristicNotification(
+//                                    characteristic, true);
+//
+//                        }
+//                        //写入
+//                        if (characteristic.getUuid().toString().equals("0000ff01-0000-1000-8000-00805f9b34fb")) {
+//                            mBluetoothLeService.write(characteristic);
+//                        }
                         if ((charaProp | BluetoothGattCharacteristic.PROPERTY_READ) > 0) {
                             // If there is an active notification on a characteristic, clear
                             // it first so it doesn't update the data field on the user interface.
@@ -145,7 +160,7 @@ public class DeviceControlActivity extends AppCompatActivity {
                     }
                     return false;
                 }
-    };
+            };
 
     private void clearUI() {
         mGattServicesList.setAdapter((SimpleExpandableListAdapter) null);
@@ -212,7 +227,7 @@ public class DeviceControlActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case R.id.menu_connect:
                 mBluetoothLeService.connect(mDeviceAddress);
                 return true;
@@ -288,12 +303,12 @@ public class DeviceControlActivity extends AppCompatActivity {
                 this,
                 gattServiceData,
                 android.R.layout.simple_expandable_list_item_2,
-                new String[] {LIST_NAME, LIST_UUID},
-                new int[] { android.R.id.text1, android.R.id.text2 },
+                new String[]{LIST_NAME, LIST_UUID},
+                new int[]{android.R.id.text1, android.R.id.text2},
                 gattCharacteristicData,
                 android.R.layout.simple_expandable_list_item_2,
-                new String[] {LIST_NAME, LIST_UUID},
-                new int[] { android.R.id.text1, android.R.id.text2 }
+                new String[]{LIST_NAME, LIST_UUID},
+                new int[]{android.R.id.text1, android.R.id.text2}
         );
         mGattServicesList.setAdapter(gattServiceAdapter);
     }
