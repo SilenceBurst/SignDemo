@@ -40,10 +40,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * For a given BLE device, this Activity provides the user interface to connect, display data,
- * and display GATT services and characteristics supported by the device.  The Activity
- * communicates with {@code BluetoothLeService}, which in turn interacts with the
- * Bluetooth LE API.
+ * 对于指定的ble设备，连接、显示数据、显示其包含的服务及特征值、数据通信
  */
 public class DeviceControlActivity extends AppCompatActivity {
     private final static String TAG = DeviceControlActivity.class.getSimpleName();
@@ -65,7 +62,9 @@ public class DeviceControlActivity extends AppCompatActivity {
     private final String LIST_NAME = "NAME";
     private final String LIST_UUID = "UUID";
 
-    // Code to manage Service lifecycle.
+    /**
+     * 管理蓝牙服务的生命周期
+     */
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
 
         @Override
@@ -75,7 +74,7 @@ public class DeviceControlActivity extends AppCompatActivity {
                 Log.e(TAG, "Unable to initialize Bluetooth");
                 finish();
             }
-            // Automatically connects to the device upon successful start-up initialization.
+            //成功启动初始化后自动连接到设备
             mBluetoothLeService.connect(mDeviceAddress);
         }
 
@@ -85,12 +84,15 @@ public class DeviceControlActivity extends AppCompatActivity {
         }
     };
 
-    // Handles various events fired by the Service.
-    // ACTION_GATT_CONNECTED: connected to a GATT server.
-    // ACTION_GATT_DISCONNECTED: disconnected from a GATT server.
-    // ACTION_GATT_SERVICES_DISCOVERED: discovered GATT services.
-    // ACTION_DATA_AVAILABLE: received data from the device.  This can be a result of read
-    //                        or notification operations.
+    /**
+     * 广播接收者 处理服务的相关事件
+     * Handles various events fired by the Service.
+     * ACTION_GATT_CONNECTED: connected to a GATT server. 连接上GATT服务端
+     * ACTION_GATT_DISCONNECTED: disconnected from a GATT server.断开GATT服务端
+     * ACTION_GATT_SERVICES_DISCOVERED: discovered GATT services.连接上GATT服务端后，发现蓝牙的所有服务
+     * ACTION_DATA_AVAILABLE: received data from the device.  This can be a result of read
+     * or notification operations.
+     */
     private final BroadcastReceiver mGattUpdateReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -105,7 +107,7 @@ public class DeviceControlActivity extends AppCompatActivity {
                 invalidateOptionsMenu();
                 clearUI();
             } else if (BluetoothLeService.ACTION_GATT_SERVICES_DISCOVERED.equals(action)) {
-                // Show all the supported services and characteristics on the user interface.
+                // 在用户界面上显示所有支持的服务和特征
                 displayGattServices(mBluetoothLeService.getSupportedGattServices());
             } else if (BluetoothLeService.ACTION_DATA_AVAILABLE.equals(action)) {
                 displayData(intent.getStringExtra(BluetoothLeService.EXTRA_DATA));
@@ -113,10 +115,9 @@ public class DeviceControlActivity extends AppCompatActivity {
         }
     };
 
-    // If a given GATT characteristic is selected, check for supported features.  This sample
-    // demonstrates 'Read' and 'Notify' features.  See
-    // http://d.android.com/reference/android/bluetooth/BluetoothGatt.html for the complete
-    // list of supported characteristic features.
+    /**
+     * ExpandableListView 子条目点击监听 点击条目，会把正在通信的特征关闭通知，再把点击条目的特征打开通知
+     */
     private final ExpandableListView.OnChildClickListener servicesListClickListener =
             new ExpandableListView.OnChildClickListener() {
                 @Override
@@ -131,19 +132,18 @@ public class DeviceControlActivity extends AppCompatActivity {
                          * 打开  指定接收特征  （指定UUID）通知
                          * 在  指定写入特征  写入数据
                          */
-                        //打开接收
+                        //打开接收（测试用）
 //                        if (characteristic.getUuid().toString().equals("0000ff02-0000-1000-8000-00805f9b34fb")) {
 //                            mBluetoothLeService.setCharacteristicNotification(
 //                                    characteristic, true);
 //
 //                        }
-//                        //写入
+//                        //写入（测试用）
 //                        if (characteristic.getUuid().toString().equals("0000ff01-0000-1000-8000-00805f9b34fb")) {
 //                            mBluetoothLeService.write(characteristic);
 //                        }
                         if ((charaProp | BluetoothGattCharacteristic.PROPERTY_READ) > 0) {
-                            // If there is an active notification on a characteristic, clear
-                            // it first so it doesn't update the data field on the user interface.
+                            //如果在特征上存在活动的通知，则清除；保证先它不会更新用户界面上的数据字段（影响点击的特征返回的通知）
                             if (mNotifyCharacteristic != null) {
                                 mBluetoothLeService.setCharacteristicNotification(
                                         mNotifyCharacteristic, false);
@@ -237,6 +237,8 @@ public class DeviceControlActivity extends AppCompatActivity {
             case android.R.id.home:
                 onBackPressed();
                 return true;
+            default:
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

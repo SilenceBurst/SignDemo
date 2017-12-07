@@ -37,8 +37,7 @@ import java.util.List;
 import java.util.UUID;
 
 /**
- * Service for managing connection and data communication with a GATT server hosted on a
- * given Bluetooth LE device.
+ * 用于对指定蓝牙设备进行连接或数据通信的服务
  */
 public class BluetoothLeService extends Service {
     private final static String TAG = BluetoothLeService.class.getSimpleName();
@@ -67,9 +66,9 @@ public class BluetoothLeService extends Service {
     public final static UUID UUID_HEART_RATE_MEASUREMENT =
             UUID.fromString(SampleGattAttributes.HEART_RATE_MEASUREMENT);
 
-    // Implements callback methods for GATT events that the app cares about.  For example,
-    // connection change and services discovered.
+    // 监听蓝牙设备与GATT服务端连接和数据通信
     private final BluetoothGattCallback mGattCallback = new BluetoothGattCallback() {
+        //回调指示何时GATT客户端连接到远程GATT服务器/从远程GATT服务器断开连接
         @Override
         public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
             String intentAction;
@@ -78,7 +77,7 @@ public class BluetoothLeService extends Service {
                 mConnectionState = STATE_CONNECTED;
                 broadcastUpdate(intentAction);
                 Log.i(TAG, "Connected to GATT server.");
-                // Attempts to discover services after successful connection.
+                // 连接成功后尝试发现服务
                 Log.i(TAG, "Attempting to start service discovery:" +
                         mBluetoothGatt.discoverServices());
 
@@ -90,6 +89,7 @@ public class BluetoothLeService extends Service {
             }
         }
 
+        //发现新服务时调用回调
         @Override
         public void onServicesDiscovered(BluetoothGatt gatt, int status) {
             if (status == BluetoothGatt.GATT_SUCCESS) {
@@ -99,6 +99,7 @@ public class BluetoothLeService extends Service {
             }
         }
 
+        //回调报告特征性读取操作的结果
         @Override
         public void onCharacteristicRead(BluetoothGatt gatt,
                                          BluetoothGattCharacteristic characteristic,
@@ -108,6 +109,7 @@ public class BluetoothLeService extends Service {
             }
         }
 
+        //由于远程特征通知而触发的回调
         @Override
         public void onCharacteristicChanged(BluetoothGatt gatt,
                                             BluetoothGattCharacteristic characteristic) {
@@ -202,13 +204,11 @@ public class BluetoothLeService extends Service {
     }
 
     /**
-     * Connects to the GATT server hosted on the Bluetooth LE device.
+     * 连接到Bluetooth LE设备上托管的GATT服务器
      *
-     * @param address The device address of the destination device.
-     * @return Return true if the connection is initiated successfully. The connection result
-     * is reported asynchronously through the
-     * {@code BluetoothGattCallback#onConnectionStateChange(android.bluetooth.BluetoothGatt, int, int)}
-     * callback.
+     * @param address 设备地址
+     * @return 返回是否连接是否成功启动（注意：是启动，并不是连接结果）
+     * 连接结果是在BluetoothGattCallback onConnectionStateChange异步返回的
      */
     public boolean connect(final String address) {
         if (mBluetoothAdapter == null || address == null) {
@@ -216,7 +216,7 @@ public class BluetoothLeService extends Service {
             return false;
         }
 
-        // Previously connected device.  Try to reconnect.
+        // 以前连接的设备，尝试重连
         if (mBluetoothDeviceAddress != null && address.equals(mBluetoothDeviceAddress)
                 && mBluetoothGatt != null) {
             Log.d(TAG, "Trying to use an existing mBluetoothGatt for connection.");
@@ -233,8 +233,7 @@ public class BluetoothLeService extends Service {
             Log.w(TAG, "Device not found.  Unable to connect.");
             return false;
         }
-        // We want to directly connect to the device, so we are setting the autoConnect
-        // parameter to false.
+        // 我们要直接连接到设备，所以我们正在设置autoConnect参数为false （此处autoConnect为true可能不是立即连接）
         mBluetoothGatt = device.connectGatt(this, false, mGattCallback);
         Log.d(TAG, "Trying to create a new connection.");
         mBluetoothDeviceAddress = address;
@@ -243,10 +242,7 @@ public class BluetoothLeService extends Service {
     }
 
     /**
-     * Disconnects an existing connection or cancel a pending connection. The disconnection result
-     * is reported asynchronously through the
-     * {@code BluetoothGattCallback#onConnectionStateChange(android.bluetooth.BluetoothGatt, int, int)}
-     * callback.
+     * 断开现有连接或取消挂起的连接 断开的结果由BluetoothGattCallback onConnectionStateChange返回
      */
     public void disconnect() {
         if (mBluetoothAdapter == null || mBluetoothGatt == null) {
@@ -257,8 +253,7 @@ public class BluetoothLeService extends Service {
     }
 
     /**
-     * After using a given BLE device, the app must call this method to ensure resources are
-     * released properly.
+     * 设备使用完成后，调用此方法释放资源
      */
     public void close() {
         if (mBluetoothGatt == null) {
@@ -269,11 +264,9 @@ public class BluetoothLeService extends Service {
     }
 
     /**
-     * Request a read on a given {@code BluetoothGattCharacteristic}. The read result is reported
-     * asynchronously through the {@code BluetoothGattCallback#onCharacteristicRead(android.bluetooth.BluetoothGatt, android.bluetooth.BluetoothGattCharacteristic, int)}
-     * callback.
+     * 请求读取指定特征的数据  读取结果由BluetoothGattCallback onCharacteristicRead返回
      *
-     * @param characteristic The characteristic to read from.
+     * @param characteristic 要读取的特征值
      */
     public void readCharacteristic(BluetoothGattCharacteristic characteristic) {
         if (mBluetoothAdapter == null || mBluetoothGatt == null) {
@@ -284,10 +277,10 @@ public class BluetoothLeService extends Service {
     }
 
     /**
-     * Enables or disables notification on a give characteristic.
+     * 给指定的特征设置是否开启通知
      *
-     * @param characteristic Characteristic to act on.
-     * @param enabled        If true, enable notification.  False otherwise.
+     * @param characteristic 指定的特征
+     * @param enabled        是否开启通知
      */
     public void setCharacteristicNotification(BluetoothGattCharacteristic characteristic,
                                               boolean enabled) {
@@ -306,7 +299,7 @@ public class BluetoothLeService extends Service {
         }
     }
 
-    //写入数据
+    //写入数据（测试用）
     public void write(BluetoothGattCharacteristic characteristic) {
         //握手
         characteristic.setValue(hexStringToByteArray("A2"));
@@ -336,14 +329,14 @@ public class BluetoothLeService extends Service {
     }
 
     /**
-     * Retrieves a list of supported GATT services on the connected device. This should be
-     * invoked only after {@code BluetoothGatt#discoverServices()} completes successfully.
+     * 检索连接设备上支持的GATT服务列表。 这应该是在BluetoothGatt＃discoverServices（）}成功完成后才被调用。
      *
-     * @return A {@code List} of supported services.
+     * @return 设备上支持的GATT服务列表.
      */
     public List<BluetoothGattService> getSupportedGattServices() {
-        if (mBluetoothGatt == null) return null;
-
+        if (mBluetoothGatt == null) {
+            return null;
+        }
         return mBluetoothGatt.getServices();
     }
 }
