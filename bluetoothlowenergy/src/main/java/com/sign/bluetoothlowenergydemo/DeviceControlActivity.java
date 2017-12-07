@@ -271,13 +271,15 @@ public class DeviceControlActivity extends AppCompatActivity {
                 = new ArrayList<ArrayList<HashMap<String, String>>>();
         mGattCharacteristics = new ArrayList<ArrayList<BluetoothGattCharacteristic>>();
 
-        // Loops through available GATT Services.
+        //遍历所有的服务
         for (BluetoothGattService gattService : gattServices) {
+            //每一个服务的name 和 UUID保存在map中
             HashMap<String, String> currentServiceData = new HashMap<String, String>();
             uuid = gattService.getUuid().toString();
             currentServiceData.put(
                     LIST_NAME, SampleGattAttributes.lookup(uuid, unknownServiceString));
             currentServiceData.put(LIST_UUID, uuid);
+            //将 每一个 包含服务信息的map 都添加到集合中
             gattServiceData.add(currentServiceData);
 
             ArrayList<HashMap<String, String>> gattCharacteristicGroupData =
@@ -287,17 +289,24 @@ public class DeviceControlActivity extends AppCompatActivity {
             ArrayList<BluetoothGattCharacteristic> charas =
                     new ArrayList<BluetoothGattCharacteristic>();
 
-            // Loops through available Characteristics.
+            //遍历服务中的特征
             for (BluetoothGattCharacteristic gattCharacteristic : gattCharacteristics) {
+                //将此服务中的特征添加到集合中
                 charas.add(gattCharacteristic);
+
+                //将此特征的UUID和name保存在map中
                 HashMap<String, String> currentCharaData = new HashMap<String, String>();
                 uuid = gattCharacteristic.getUuid().toString();
                 currentCharaData.put(
                         LIST_NAME, SampleGattAttributes.lookup(uuid, unknownCharaString));
                 currentCharaData.put(LIST_UUID, uuid);
+
+                //将 每一个 包含特征信息的map 都添加到集合中
                 gattCharacteristicGroupData.add(currentCharaData);
             }
+            //将  每个服务中包含的所有特征的集合  添加到总集合中
             mGattCharacteristics.add(charas);
+            //将  每个服务中包含的所有特征信息的集合  添加到总集合中
             gattCharacteristicData.add(gattCharacteristicGroupData);
         }
 
