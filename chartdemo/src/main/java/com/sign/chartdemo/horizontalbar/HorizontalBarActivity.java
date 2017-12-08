@@ -36,8 +36,10 @@ public class HorizontalBarActivity extends DemoBase implements OnChartValueSelec
         mChart.setOnChartValueSelectedListener(this);
         // mChart.setHighlightEnabled(false);
 
+        // 如果设置为true，会在各条 bar 后面绘制 “灰色全 bar”，用以指示最大值。 启用会降低性能约 40％ 。默认：false
         mChart.setDrawBarShadow(false);
 
+        // 如果设置为true，所有值都高于其 bar 的，而不是低于其顶部。默认：true
         mChart.setDrawValueAboveBar(true);
 
         mChart.getDescription().setEnabled(false);
@@ -79,6 +81,7 @@ public class HorizontalBarActivity extends DemoBase implements OnChartValueSelec
         mChart.setFitBars(true);
         mChart.animateY(2500);
 
+        //默认情况下，所有的图表类型都支持 Legend 且在设置图表数据后会自动生成 Legend
         Legend l = mChart.getLegend();
         l.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
         l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.LEFT);
