@@ -1,4 +1,4 @@
-package com.sign.chartdemo;
+package com.sign.chartdemo.radar;
 
 import android.content.Context;
 import android.util.AttributeSet;

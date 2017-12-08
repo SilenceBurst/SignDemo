@@ -1,4 +1,4 @@
-package com.sign.chartdemo;
+package com.sign.chartdemo.radar;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -8,6 +8,7 @@ import com.github.mikephil.charting.components.MarkerView;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.utils.MPPointF;
+import com.sign.chartdemo.R;
 
 import java.text.DecimalFormat;
 

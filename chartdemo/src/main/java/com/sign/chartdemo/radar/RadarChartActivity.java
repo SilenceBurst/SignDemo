@@ -1,4 +1,4 @@
-package com.sign.chartdemo;
+package com.sign.chartdemo.radar;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -20,10 +20,12 @@ import com.github.mikephil.charting.data.RadarEntry;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.IDataSet;
 import com.github.mikephil.charting.interfaces.datasets.IRadarDataSet;
+import com.sign.chartdemo.DemoBase;
+import com.sign.chartdemo.R;
 
 import java.util.ArrayList;
 
-public class RadarChartActivitry extends DemoBase {
+public class RadarChartActivity extends DemoBase {
 
     private MyRadarChart mChart;
 

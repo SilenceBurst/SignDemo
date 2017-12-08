@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sign.chartdemo.MainActivity">
+
+    <Button
+        android:id="@+id/btn_radar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="雷达图 radar"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_horizontal_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="横向柱状图 horizontal bar"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/btn_radar" />
+</android.support.constraint.ConstraintLayout>
