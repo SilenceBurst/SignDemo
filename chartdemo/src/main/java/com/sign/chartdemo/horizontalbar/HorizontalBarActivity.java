@@ -1,20 +1,22 @@
 package com.sign.chartdemo.horizontalbar;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.graphics.RectF;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.github.mikephil.charting.charts.HorizontalBarChart;
+import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
-import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.MPPointF;
@@ -22,6 +24,7 @@ import com.sign.chartdemo.DemoBase;
 import com.sign.chartdemo.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class HorizontalBarActivity extends DemoBase implements OnChartValueSelectedListener {
 
@@ -34,105 +37,59 @@ public class HorizontalBarActivity extends DemoBase implements OnChartValueSelec
         mChart = findViewById(R.id.horizontal_bar);
 
         mChart.setOnChartValueSelectedListener(this);
-        // mChart.setHighlightEnabled(false);
+        //绘制图表边框
+        mChart.setDrawBorders(true);
+        mChart.setBorderColor(Color.WHITE);
 
-        // 如果设置为true，会在各条 bar 后面绘制 “灰色全 bar”，用以指示最大值。 启用会降低性能约 40％ 。默认：false
-        mChart.setDrawBarShadow(false);
+        mChart.setBackgroundColor(Color.BLACK);
+        Legend legend = mChart.getLegend();
+        legend.setEnabled(false);
 
-        // 如果设置为true，所有值都高于其 bar 的，而不是低于其顶部。默认：true
-        mChart.setDrawValueAboveBar(true);
+        //设置左侧标签
+        XAxis xAxis = mChart.getXAxis();
+        //标签位置
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        final String[] xValues = {"R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10", "R11", "R12", "R13", "R14", "R15"};
+        //标签个数
+        xAxis.setLabelCount(xValues.length);
+        xAxis.setValueFormatter(new IAxisValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                return xValues[(int) value];
+            }
+        });
+        xAxis.setTextColor(Color.WHITE);
 
-        mChart.getDescription().setEnabled(false);
+        //顶层标签禁用
+        mChart.getAxisLeft().setEnabled(false);
+        mChart.getAxisLeft().setAxisMinimum(0.0f);
+        mChart.getAxisRight().setAxisMinimum(0.0f);
+        mChart.getAxisRight().setTextColor(Color.WHITE);
 
-        // if more than 60 entries are displayed in the chart, no values will be
-        // drawn
-        mChart.setMaxVisibleValueCount(60);
-
-        // scaling can now only be done on x- and y-axis separately
-        mChart.setPinchZoom(false);
-
-        // draw shadows for each bar that show the maximum value
-        // mChart.setDrawBarShadow(true);
-
-        mChart.setDrawGridBackground(false);
-
-        XAxis xl = mChart.getXAxis();
-        xl.setPosition(XAxis.XAxisPosition.TOP);
-        xl.setTypeface(mTfLight);
-        xl.setDrawAxisLine(true);
-        xl.setDrawGridLines(false);
-        xl.setGranularity(10f);
-
-        YAxis yl = mChart.getAxisLeft();
-        yl.setTypeface(mTfLight);
-        yl.setDrawAxisLine(true);
-        yl.setDrawGridLines(true);
-        yl.setAxisMinimum(0f); // this replaces setStartAtZero(true)
-//        yl.setInverted(true);
-
-        YAxis yr = mChart.getAxisRight();
-        yr.setTypeface(mTfLight);
-        yr.setDrawAxisLine(true);
-        yr.setDrawGridLines(false);
-        yr.setAxisMinimum(0f); // this replaces setStartAtZero(true)
-//        yr.setInverted(true);
-
-        setData(12, 50);
-        mChart.setFitBars(true);
-        mChart.animateY(2500);
-
-        //默认情况下，所有的图表类型都支持 Legend 且在设置图表数据后会自动生成 Legend
-        Legend l = mChart.getLegend();
-        l.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
-        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.LEFT);
-        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
-        l.setDrawInside(false);
-        l.setFormSize(8f);
-        l.setXEntrySpace(4f);
+        setData(15, 100);
     }
 
     private void setData(int count, float range) {
-
-        float start = 1f;
-
-        ArrayList<BarEntry> yVals1 = new ArrayList<BarEntry>();
-
-        for (int i = (int) start; i < start + count + 1; i++) {
-            float mult = (range + 1);
-            float val = (float) (Math.random() * mult);
-
-            if (Math.random() * 100 < 25) {
-                yVals1.add(new BarEntry(i, val, getResources().getDrawable(R.drawable.star)));
-            } else {
-                yVals1.add(new BarEntry(i, val));
-            }
+        List<BarEntry> entries = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            entries.add(new BarEntry(i, ((float) Math.random() * range)));
         }
+        BarDataSet set = new BarDataSet(entries, "BarDataSet");
+        set.setColors(ColorTemplate.COLORFUL_COLORS);
+        set.setValueTextColor(Color.WHITE);
+        BarData data = new BarData(set);
 
-        BarDataSet set1;
+        //设置柱的宽度
+        data.setBarWidth(0.7f);
+        mChart.setData(data);
+        mChart.setFitBars(true); // make the x-axis fit exactly all bars
 
-        if (mChart.getData() != null &&
-                mChart.getData().getDataSetCount() > 0) {
-            set1 = (BarDataSet) mChart.getData().getDataSetByIndex(0);
-            set1.setValues(yVals1);
-            mChart.getData().notifyDataChanged();
-            mChart.notifyDataSetChanged();
-        } else {
-            set1 = new BarDataSet(yVals1, "The year 2017");
+        //不显示描述
+        Description description = mChart.getDescription();
+        description.setEnabled(false);
 
-            set1.setDrawIcons(false);
-
-            set1.setColors(ColorTemplate.MATERIAL_COLORS);
-
-            ArrayList<IBarDataSet> dataSets = new ArrayList<IBarDataSet>();
-            dataSets.add(set1);
-
-            BarData data = new BarData(dataSets);
-            data.setValueTextSize(10f);
-            data.setValueTypeface(mTfLight);
-            data.setBarWidth(0.9f);
-
-            mChart.setData(data);
-        }
+        //刷新数据
+        mChart.invalidate();
     }
 
     protected RectF mOnValueSelectedRectF = new RectF();
