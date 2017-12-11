@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
                     uploadImage(path);
                 }
                 break;
+            default:
+                break;
         }
     }
 
@@ -71,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
         Bitmap smallBitmap = Utils.getSmallBitmap(path);
         //删除拍照的文件
         if (mFile != null && mFile.exists()) {
-            Toast.makeText(this,"原图片大小"+mFile.length(),Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "原图片大小" + mFile.length(), Toast.LENGTH_LONG).show();
 //            mFile.delete();
         }
         //保存压缩后的图片
         newFile = Utils.saveBitmap(smallBitmap);
-        Toast.makeText(this,"压缩后图片大小"+newFile.length(),Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "压缩后图片大小" + newFile.length(), Toast.LENGTH_LONG).show();
         Glide.with(MainActivity.this).load(newFile).into(imageView);
         //模拟上传图片
         final ProgressDialog dialog = new ProgressDialog(this);
@@ -176,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
                             //因为miui系统没有自动创建那个文件夹，所以拍照没有找到那个文件夹，就卡起了，
                             // 解决办法先判断文件夹是否存在，如果不存在，就先创建文件夹。再执行后面的方法就OK了！
                             File file = new File(Environment.getExternalStorageDirectory() + File.separator + "CameraDemo");
-                            if(!file.exists()){
+                            if (!file.exists()) {
                                 file.mkdir();
                             }
 

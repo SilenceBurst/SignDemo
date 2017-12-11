@@ -19,7 +19,9 @@
         <activity
             android:name=".radar.RadarChartActivity"
             android:label="雷达图" />
-        <activity android:name=".horizontalbar.HorizontalBarActivity"></activity>
+        <activity android:name=".horizontalbar.HorizontalBarActivity" />
+        <activity android:name=".compare.TwoLineActivity" />
+        <activity android:name=".compare.OneLineActivity"></activity>
     </application>
 
 </manifest>

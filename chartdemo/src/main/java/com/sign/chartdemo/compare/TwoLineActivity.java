@@ -1,4 +1,4 @@
-package com.sign.chartdemo.horizontalbar;
+package com.sign.chartdemo.compare;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
@@ -18,7 +18,6 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
-import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.MPPointF;
 import com.sign.chartdemo.DemoBase;
 import com.sign.chartdemo.R;
@@ -26,67 +25,81 @@ import com.sign.chartdemo.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HorizontalBarActivity extends DemoBase implements OnChartValueSelectedListener {
-
+public class TwoLineActivity extends DemoBase implements OnChartValueSelectedListener {
     protected HorizontalBarChart mChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_horizontal_bar);
+        setContentView(R.layout.activity_two_line);
         mChart = findViewById(R.id.horizontal_bar);
 
         mChart.setOnChartValueSelectedListener(this);
-        //绘制图表边框
-        mChart.setDrawBorders(true);
-        mChart.setBorderColor(Color.WHITE);
 
+        mChart.setBackgroundColor(Color.WHITE);
+        mChart.setDrawValueAboveBar(true);
+
+        Legend legend = mChart.getLegend();
+        legend.setEnabled(false);
         //不显示描述
         Description description = mChart.getDescription();
         description.setEnabled(false);
 
-        mChart.setBackgroundColor(Color.BLACK);
-        Legend legend = mChart.getLegend();
-        legend.setEnabled(false);
-
-        //设置左侧标签
         XAxis xAxis = mChart.getXAxis();
+        xAxis.setAxisMinimum(0.0f);
         //标签位置
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-        final String[] xValues = {"R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10", "R11", "R12", "R13", "R14", "R15"};
-        //标签个数
-        xAxis.setLabelCount(xValues.length);
-        xAxis.setValueFormatter(new IAxisValueFormatter() {
+        //保证标签在小组中间
+        xAxis.setCenterAxisLabels(true);
+        final String[] xLable = {"R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9"};
+//        标签个数
+        xAxis.setLabelCount(xLable.length+1, true);
+        IAxisValueFormatter formatter = new IAxisValueFormatter() {
+
             @Override
             public String getFormattedValue(float value, AxisBase axis) {
-                return xValues[(int) value];
+                Log.d("test", value + "");
+                return xLable[(int) value % xLable.length];
             }
-        });
-        xAxis.setTextColor(Color.WHITE);
+        };
+        xAxis.setValueFormatter(formatter);
+        xAxis.setTextColor(Color.BLUE);
+        xAxis.setAxisMaximum(9f);
 
         //顶层标签禁用
         mChart.getAxisLeft().setEnabled(false);
+        mChart.getAxisRight().setEnabled(false);
         mChart.getAxisLeft().setAxisMinimum(0.0f);
         mChart.getAxisRight().setAxisMinimum(0.0f);
-        mChart.getAxisRight().setTextColor(Color.WHITE);
 
-        setData(15, 100);
+        setData(10, 100);
+
+        mChart.setFitBars(true);
+        mChart.animateY(2500);
     }
 
     private void setData(int count, float range) {
-        List<BarEntry> entries = new ArrayList<>();
-        for (int i = 0; i < count; i++) {
-            entries.add(new BarEntry(i, ((float) Math.random() * range)));
+        List<BarEntry> entries1 = new ArrayList<>();
+        List<BarEntry> entries2 = new ArrayList<>();
+        for (int i = 1; i < count; i++) {
+            entries1.add(new BarEntry(i, ((float) Math.random() * range)));
+            entries2.add(new BarEntry(i, ((float) Math.random() * range)));
         }
-        BarDataSet set = new BarDataSet(entries, "BarDataSet");
-        set.setColors(ColorTemplate.COLORFUL_COLORS);
-        set.setValueTextColor(Color.WHITE);
-        BarData data = new BarData(set);
+        BarDataSet set1 = new BarDataSet(entries1, "BarDataSet1");
+        BarDataSet set2 = new BarDataSet(entries2, "BarDataSet2");
+        set1.setColors(Color.RED);
+        set1.setValueTextColor(Color.RED);
+        set2.setColors(Color.GREEN);
+        set2.setValueTextColor(Color.GREEN);
 
-        //设置柱的宽度
-        data.setBarWidth(0.7f);
-        mChart.setData(data);
-        mChart.setFitBars(true); // make the x-axis fit exactly all bars
+        BarData barData = new BarData(set1, set2);
+        barData.setBarWidth(0.45f);
+        mChart.setData(barData);
+
+        //设置分组
+        float groupSpace = 0.06f;
+        float barSpace = 0.02f;
+        mChart.groupBars(0f, groupSpace, barSpace);
 
         //刷新数据
         mChart.invalidate();
