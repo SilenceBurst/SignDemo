@@ -53,7 +53,7 @@ public class TwoLineActivity extends DemoBase implements OnChartValueSelectedLis
         xAxis.setCenterAxisLabels(true);
         final String[] xLable = {"R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9"};
 //        标签个数
-        xAxis.setLabelCount(xLable.length+1, true);
+        xAxis.setLabelCount(xLable.length + 1, true);
         IAxisValueFormatter formatter = new IAxisValueFormatter() {
 
             @Override
