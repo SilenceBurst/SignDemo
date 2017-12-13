@@ -6,7 +6,6 @@ import android.graphics.RectF;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
@@ -14,7 +13,7 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
@@ -55,12 +54,7 @@ public class OneLineActivity extends DemoBase implements OnChartValueSelectedLis
         final String[] xValues = {"R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10", "R11", "R12", "R13", "R14", "R15"};
         //标签个数
         xAxis.setLabelCount(xValues.length);
-        xAxis.setValueFormatter(new IAxisValueFormatter() {
-            @Override
-            public String getFormattedValue(float value, AxisBase axis) {
-                return xValues[(int) value];
-            }
-        });
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(xValues));
         xAxis.setTextColor(Color.WHITE);
         xAxis.setPosition(XAxis.XAxisPosition.TOP);
 

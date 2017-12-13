@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.github.mikephil.charting.charts.HorizontalBarChart;
-import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
@@ -15,7 +14,7 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.MPPointF;
@@ -53,16 +52,8 @@ public class TwoLineActivity extends DemoBase implements OnChartValueSelectedLis
         xAxis.setCenterAxisLabels(true);
         final String[] xLable = {"R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9"};
 //        标签个数
-        xAxis.setLabelCount(xLable.length + 1, true);
-        IAxisValueFormatter formatter = new IAxisValueFormatter() {
-
-            @Override
-            public String getFormattedValue(float value, AxisBase axis) {
-                Log.d("test", value + "");
-                return xLable[(int) value % xLable.length];
-            }
-        };
-        xAxis.setValueFormatter(formatter);
+        xAxis.setLabelCount(xLable.length);
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(xLable));
         xAxis.setTextColor(Color.BLUE);
         xAxis.setAxisMaximum(9f);
 
@@ -72,7 +63,7 @@ public class TwoLineActivity extends DemoBase implements OnChartValueSelectedLis
         mChart.getAxisLeft().setAxisMinimum(0.0f);
         mChart.getAxisRight().setAxisMinimum(0.0f);
 
-        setData(10, 100);
+        setData(9, 100);
 
         mChart.setFitBars(true);
         mChart.animateY(2500);
@@ -81,7 +72,7 @@ public class TwoLineActivity extends DemoBase implements OnChartValueSelectedLis
     private void setData(int count, float range) {
         List<BarEntry> entries1 = new ArrayList<>();
         List<BarEntry> entries2 = new ArrayList<>();
-        for (int i = 1; i < count; i++) {
+        for (int i = 0; i < count; i++) {
             entries1.add(new BarEntry(i, ((float) Math.random() * range)));
             entries2.add(new BarEntry(i, ((float) Math.random() * range)));
         }
