@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sign.chartdemo.compare.OneLineActivity">
-
+    tools:context="com.sign.chartdemo.horizontalbar_reverse.HorizontalBarReverseActivity">
+    <com.sign.chartdemo.horizontalbar_reverse.MyHorizontalBar
+        android:id="@+id/horizontal_bar"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@android:color/white" />
 </android.support.constraint.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.sign.chartdemo.compare;
+package com.sign.chartdemo.horizontalbar_reverse;
 
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;

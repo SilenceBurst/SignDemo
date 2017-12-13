@@ -20,11 +20,12 @@
         android:text="横向柱状图 horizontal bar"
         android:textAllCaps="false"
         app:layout_constraintTop_toBottomOf="@id/btn_radar" />
+
     <Button
-        android:id="@+id/btn_one_line"
+        android:id="@+id/btn_horizontal_bar_reverse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="数据对比 单行"
+        android:text="横向柱状图反转 horizontal bar reverse"
         android:textAllCaps="false"
         app:layout_constraintTop_toBottomOf="@id/btn_horizontal_bar" />
 
@@ -34,5 +35,13 @@
         android:layout_height="wrap_content"
         android:text="数据对比 双行"
         android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/btn_one_line" />
+        app:layout_constraintTop_toBottomOf="@id/btn_horizontal_bar_reverse" />
+
+    <Button
+        android:id="@+id/btn_one_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="数据对比 单行"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/btn_two_line" />
 </android.support.constraint.ConstraintLayout>

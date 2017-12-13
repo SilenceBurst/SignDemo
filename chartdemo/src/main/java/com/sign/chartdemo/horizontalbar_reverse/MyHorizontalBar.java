@@ -1,4 +1,4 @@
-package com.sign.chartdemo.compare;
+package com.sign.chartdemo.horizontalbar_reverse;
 
 import android.content.Context;
 import android.util.AttributeSet;
