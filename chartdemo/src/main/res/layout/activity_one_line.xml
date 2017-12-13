@@ -1,9 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context="com.sign.chartdemo.compare.OneLineActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <com.sign.chartdemo.horizontalbar_reverse.MyHorizontalBar
+        android:id="@+id/left_horizontal_bar"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_weight="1"
+        android:background="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:background="#fff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.7" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical"
+            android:text="相关色温 CCT"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical"
+            android:text="黑体线距离Duv"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical"
+            android:text="显色指数CRI"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical"
+            android:text="Re(R1~R15)"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical"
+            android:text="光色品质CQS"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical"
+            android:text="TLCI"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical"
+            android:text="GAI"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical"
+            android:text="光照度"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical"
+            android:text="呎烛光"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical"
+            android:text="峰值波长"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical"
+            android:text="主波长"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical"
+            android:text="色纯度"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.7" />
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.HorizontalBarChart
+        android:id="@+id/right_horizontal_bar"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_weight="1"
+        android:background="@android:color/white" />
+</LinearLayout>
