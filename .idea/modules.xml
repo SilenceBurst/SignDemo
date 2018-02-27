@@ -3,28 +3,52 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RecycleAdapterlibrary/RecycleAdapterlibrary.iml" filepath="$PROJECT_DIR$/RecycleAdapterlibrary/RecycleAdapterlibrary.iml" />
+      <module fileurl="file://E:\demo\SignDemo\RecycleAdapterlibrary\RecycleAdapterlibrary.iml" filepath="E:\demo\SignDemo\RecycleAdapterlibrary\RecycleAdapterlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/SignDemo.iml" filepath="$PROJECT_DIR$/SignDemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\SignDemo.iml" filepath="E:\demo\SignDemo\SignDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\demo\SignDemo\app\app.iml" filepath="E:\demo\SignDemo\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/baiduocrdemo/baiduocrdemo.iml" filepath="$PROJECT_DIR$/baiduocrdemo/baiduocrdemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\baiduocrdemo\baiduocrdemo.iml" filepath="E:\demo\SignDemo\baiduocrdemo\baiduocrdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/bluetoothdemo/bluetoothdemo.iml" filepath="$PROJECT_DIR$/bluetoothdemo/bluetoothdemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\bluetoothdemo\bluetoothdemo.iml" filepath="E:\demo\SignDemo\bluetoothdemo\bluetoothdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/bluetoothlowenergy/bluetoothlowenergy.iml" filepath="$PROJECT_DIR$/bluetoothlowenergy/bluetoothlowenergy.iml" />
+      <module fileurl="file://E:\demo\SignDemo\bluetoothlowenergy\bluetoothlowenergy.iml" filepath="E:\demo\SignDemo\bluetoothlowenergy\bluetoothlowenergy.iml" />
       <module fileurl="file://$PROJECT_DIR$/camerademo/camerademo.iml" filepath="$PROJECT_DIR$/camerademo/camerademo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\camerademo\camerademo.iml" filepath="E:\demo\SignDemo\camerademo\camerademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/chartdemo/chartdemo.iml" filepath="$PROJECT_DIR$/chartdemo/chartdemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\chartdemo\chartdemo.iml" filepath="E:\demo\SignDemo\chartdemo\chartdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/constraintlayoutdemo/constraintlayoutdemo.iml" filepath="$PROJECT_DIR$/constraintlayoutdemo/constraintlayoutdemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\constraintlayoutdemo\constraintlayoutdemo.iml" filepath="E:\demo\SignDemo\constraintlayoutdemo\constraintlayoutdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/coordinatorlayoutdemo/coordinatorlayoutdemo.iml" filepath="$PROJECT_DIR$/coordinatorlayoutdemo/coordinatorlayoutdemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\coordinatorlayoutdemo\coordinatorlayoutdemo.iml" filepath="E:\demo\SignDemo\coordinatorlayoutdemo\coordinatorlayoutdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/customviewdemo/customviewdemo.iml" filepath="$PROJECT_DIR$/customviewdemo/customviewdemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\customviewdemo\customviewdemo.iml" filepath="E:\demo\SignDemo\customviewdemo\customviewdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/diffutildemo/diffutildemo.iml" filepath="$PROJECT_DIR$/diffutildemo/diffutildemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\diffutildemo\diffutildemo.iml" filepath="E:\demo\SignDemo\diffutildemo\diffutildemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/gradienttoolbardemo/gradienttoolbardemo.iml" filepath="$PROJECT_DIR$/gradienttoolbardemo/gradienttoolbardemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\gradienttoolbardemo\gradienttoolbardemo.iml" filepath="E:\demo\SignDemo\gradienttoolbardemo\gradienttoolbardemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/imdemo/imdemo.iml" filepath="$PROJECT_DIR$/imdemo/imdemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\imdemo\imdemo.iml" filepath="E:\demo\SignDemo\imdemo\imdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvpdemo/mvpdemo.iml" filepath="$PROJECT_DIR$/mvpdemo/mvpdemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\mvpdemo\mvpdemo.iml" filepath="E:\demo\SignDemo\mvpdemo\mvpdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/networksniffdemo/networksniffdemo.iml" filepath="$PROJECT_DIR$/networksniffdemo/networksniffdemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\networksniffdemo\networksniffdemo.iml" filepath="E:\demo\SignDemo\networksniffdemo\networksniffdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ocr_ui/ocr_ui.iml" filepath="$PROJECT_DIR$/ocr_ui/ocr_ui.iml" />
+      <module fileurl="file://E:\demo\SignDemo\ocr_ui\ocr_ui.iml" filepath="E:\demo\SignDemo\ocr_ui\ocr_ui.iml" />
       <module fileurl="file://$PROJECT_DIR$/proxydemo/proxydemo.iml" filepath="$PROJECT_DIR$/proxydemo/proxydemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\proxydemo\proxydemo.iml" filepath="E:\demo\SignDemo\proxydemo\proxydemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/recordbutton/recordbutton.iml" filepath="$PROJECT_DIR$/recordbutton/recordbutton.iml" />
+      <module fileurl="file://E:\demo\SignDemo\recordbutton\recordbutton.iml" filepath="E:\demo\SignDemo\recordbutton\recordbutton.iml" />
       <module fileurl="file://$PROJECT_DIR$/recyclerviewitemdecoration/recyclerviewitemdecoration.iml" filepath="$PROJECT_DIR$/recyclerviewitemdecoration/recyclerviewitemdecoration.iml" />
+      <module fileurl="file://E:\demo\SignDemo\recyclerviewitemdecoration\recyclerviewitemdecoration.iml" filepath="E:\demo\SignDemo\recyclerviewitemdecoration\recyclerviewitemdecoration.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjava2demo/rxjava2demo.iml" filepath="$PROJECT_DIR$/rxjava2demo/rxjava2demo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\rxjava2demo\rxjava2demo.iml" filepath="E:\demo\SignDemo\rxjava2demo\rxjava2demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/schemedemo/schemedemo.iml" filepath="$PROJECT_DIR$/schemedemo/schemedemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/transition3d/transition3d.iml" filepath="$PROJECT_DIR$/transition3d/transition3d.iml" />
+      <module fileurl="file://E:\demo\SignDemo\transition3d\transition3d.iml" filepath="E:\demo\SignDemo\transition3d\transition3d.iml" />
       <module fileurl="file://$PROJECT_DIR$/verticalviewpagerdemo/verticalviewpagerdemo.iml" filepath="$PROJECT_DIR$/verticalviewpagerdemo/verticalviewpagerdemo.iml" />
+      <module fileurl="file://E:\demo\SignDemo\verticalviewpagerdemo\verticalviewpagerdemo.iml" filepath="E:\demo\SignDemo\verticalviewpagerdemo\verticalviewpagerdemo.iml" />
     </modules>
   </component>
 </project>
