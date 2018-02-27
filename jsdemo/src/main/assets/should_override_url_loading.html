@@ -1,0 +1,19 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SilenceBurst</title>
+    <script>
+            function callAndroid(){
+                 /*约定的url协议为：js://webview?arg1=111&arg2=222*/
+                 document.location = "js://webview?arg1=111&arg2=222";
+            }
+
+            function getResult(result){
+                alert("result is"+result);
+            }
+    </script>
+</head>
+<body>
+<button type="button" onclick="callAndroid()">点我调android方法</button>
+</body>
+</html>

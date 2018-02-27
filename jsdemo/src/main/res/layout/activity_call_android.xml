@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sign.js_demo.CallAndroidActivity">
+
+    <Button
+        android:id="@+id/btn_add_javascript_interface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add javascript interface"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btn_should_override_url_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="should override url loading"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btn_on_js_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="on js prompt"
+        android:textAllCaps="false" />
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
