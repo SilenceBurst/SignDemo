@@ -142,5 +142,4 @@ public class CallAndroidActivity extends AppCompatActivity implements View.OnCli
         Toast.makeText(mContext, "js调用了android的方法" + map.toString(), Toast.LENGTH_LONG).show();
         return " call android ok";
     }
-
 }
