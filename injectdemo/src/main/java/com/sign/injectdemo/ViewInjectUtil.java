@@ -10,6 +10,7 @@ import java.lang.reflect.Field;
  */
 
 public class ViewInjectUtil {
+
     public static void inject(Object obj, View view) {
         Field[] fields = obj.getClass().getFields();
         for (Field field : fields) {
@@ -35,4 +36,5 @@ public class ViewInjectUtil {
             }
         }
     }
+
 }
