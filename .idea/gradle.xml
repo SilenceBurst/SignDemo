@@ -21,6 +21,7 @@
             <option value="$PROJECT_DIR$/diffutildemo" />
             <option value="$PROJECT_DIR$/gradienttoolbardemo" />
             <option value="$PROJECT_DIR$/imdemo" />
+            <option value="$PROJECT_DIR$/injectdemo" />
             <option value="$PROJECT_DIR$/jsdemo" />
             <option value="$PROJECT_DIR$/mvpdemo" />
             <option value="$PROJECT_DIR$/networksniffdemo" />
@@ -29,7 +30,6 @@
             <option value="$PROJECT_DIR$/recordbutton" />
             <option value="$PROJECT_DIR$/recyclerviewitemdecoration" />
             <option value="$PROJECT_DIR$/rxjava2demo" />
-            <option value="$PROJECT_DIR$/schemedemo" />
             <option value="$PROJECT_DIR$/transition3d" />
             <option value="$PROJECT_DIR$/verticalviewpagerdemo" />
           </set>
