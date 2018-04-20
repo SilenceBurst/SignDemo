@@ -21,3 +21,4 @@
 [Scheme跳转](https://github.com/SilenceBurst/SignDemo/tree/master/schemedemo/src)</br></br>
 [android js交互](https://github.com/SilenceBurst/SignDemo/tree/master/jsdemo/src)</br></br>
 [简单自定义注解](https://github.com/SilenceBurst/SignDemo/tree/master/injectdemo/src)</br></br>
+[android使用jdbc连接数据库](https://github.com/SilenceBurst/SignDemo/tree/master/jdbcdemo/src)</br></br>
