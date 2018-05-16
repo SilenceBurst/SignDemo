@@ -50,4 +50,5 @@ public class MyItemTouchHelperCallback extends ItemTouchHelper.Callback {
     public boolean isLongPressDragEnabled() {
         return super.isLongPressDragEnabled();
     }
+
 }
