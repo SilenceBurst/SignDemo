@@ -20,4 +20,6 @@
 [3D过渡动画](https://github.com/SilenceBurst/SignDemo/tree/master/transition3d/src)</br></br>
 [Scheme跳转](https://github.com/SilenceBurst/SignDemo/tree/master/schemedemo/src)</br></br>
 [android js交互](https://github.com/SilenceBurst/SignDemo/tree/master/jsdemo/src)</br></br>
+[简单自定义注解](https://github.com/SilenceBurst/SignDemo/tree/master/injectdemo/src)</br></br>
+[android使用jdbc连接数据库](https://github.com/SilenceBurst/SignDemo/tree/master/jdbcdemo/src)</br></br>
 [RecyclerView 条目拖动相关](https://github.com/SilenceBurst/SignDemo/tree/master/itemtouchhelperdemo/src)</br></br>
