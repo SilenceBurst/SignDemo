@@ -24,3 +24,4 @@
 [android使用jdbc连接数据库](https://github.com/SilenceBurst/SignDemo/tree/master/jdbcdemo/src)</br></br>
 [RecyclerView 条目拖动相关](https://github.com/SilenceBurst/SignDemo/tree/master/itemtouchhelperdemo/src)</br></br>
 [RecyclerView 实现查看更多、收起](https://github.com/SilenceBurst/SignDemo/tree/master/seemoredemo/src)</br></br>
+[ZXing扫描](https://github.com/SilenceBurst/SignDemo/tree/master/zxingdemo/src)</br></br>
